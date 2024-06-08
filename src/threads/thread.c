@@ -342,6 +342,7 @@ thread_set_priority (int new_priority)
 
    if (new_priority < prev){
       thread_yeild();
+   }
 }
 
 /* Returns the current thread's priority. */
@@ -356,6 +357,7 @@ void
 thread_set_nice (int nice UNUSED) 
 {
   /* Not yet implemented. */
+   thread_current()->nice = nice;
 }
 
 /* Returns the current thread's nice value. */
@@ -363,7 +365,7 @@ int
 thread_get_nice (void) 
 {
   /* Not yet implemented. */
-  return 0;
+  return thread_current()->nice;
 }
 
 /* Returns 100 times the system load average. */
