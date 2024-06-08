@@ -357,7 +357,7 @@ void
 thread_set_nice (int nice UNUSED) 
 {
   /* Not yet implemented. */
-   thread_current()->nice = nice;
+   
 }
 
 /* Returns the current thread's nice value. */
@@ -365,7 +365,7 @@ int
 thread_get_nice (void) 
 {
   /* Not yet implemented. */
-  return thread_current()->nice;
+  
 }
 
 /* Returns 100 times the system load average. */
