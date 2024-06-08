@@ -341,7 +341,7 @@ thread_set_priority (int new_priority)
    curr->priority = new_priority;
 
    if (new_priority < prev){
-      thread_yeild();
+      thread_yield();
    }
 }
 
