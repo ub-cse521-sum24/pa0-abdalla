@@ -336,6 +336,12 @@ void
 thread_set_priority (int new_priority) 
 {
   /* Not yet implemented. */
+   struct thread *curr = thread_current();
+   int prev = curr->priority;
+   curr->priority = new_priority;
+
+   if (new_priority < prev){
+      thread_yeild();
 }
 
 /* Returns the current thread's priority. */
